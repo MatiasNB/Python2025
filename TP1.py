@@ -47,19 +47,19 @@ for _ in range(3):
             continue
         else:
             user_answer = int(user_answer)-1
-            break
-    # Se verifica si la respuesta es correcta
-    if user_answer == correct_answers_index[question_index]:
-        print("¡Correcto!")
-        user_point+=1
-        #break - se sacao esta linea para que pueda conta mas de 1 repuesta correcta
-    else:
-    # Si el usuario no responde correctamente después de 2 intentos,
-    # se muestra la respuesta correcta
-        print("Incorrecto. La respuesta correcta es:")
-        print(answers[question_index]
-[correct_answers_index[question_index]])
-        user_point-=0.5
+            #break
+        # Se verifica si la respuesta es correcta
+        if user_answer == correct_answers_index[question_index]:
+            print("¡Correcto!")
+            user_point+=1
+            break 
+        else:
+        # Si el usuario no responde correctamente después de 2 intentos,
+        # se muestra la respuesta correcta
+            print("Incorrecto. La respuesta correcta es:")
+            print(answers[question_index]
+    [correct_answers_index[question_index]])
+            user_point-=0.5
  
     # Se imprime un blanco al final de la pregunta
     print()
