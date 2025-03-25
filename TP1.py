@@ -26,7 +26,7 @@ correct_answers_index = [1, 2, 0, 3, 1]
 
 user_point = 0
 #se genera una lista k-tupla - con ramdon se genera de forma aleatoria
-questions_to_ask = random.choices(list(zip(questions,answers, correct_answers_index)), k=3)
+questions_to_ask = random.sample(list(zip(questions,answers, correct_answers_index)), k=3)
 # El usuario deberá contestar 3 preguntas
 for questions in questions_to_ask:
     
